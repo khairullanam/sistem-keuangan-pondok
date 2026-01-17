@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+    background: linear-gradient(to bottom right, #e0f2f7, #e0e7fa); /* Light mode gradient */
+    color: #333; /* Default text color for light mode */
+}
+
+/* Dark Mode Body Background */
+.dark body {
+    /* Menggunakan gradient yang lebih gelap untuk dark mode, atau warna solid yang pas */
+    background: linear-gradient(to bottom right, #1a202c, #2d3748); /* Contoh dark gradient */
+    color: #e2e8f0; /* Default text color for dark mode */
+}
+
+/* --- Base Glassmorphism Style --- */
+.glass-effect {
+    background-color: rgba(19, 138, 48, 0.15); /* Lebih transparan di light mode */
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Glassmorphism Style */
+.dark .glass-effect {
+    background-color: rgba(45, 55, 72, 0.3); /* Transparansi yang cocok untuk dark mode */
+    backdrop-filter: blur(10px) saturate(180%); /* Tetap gunakan blur */
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Batas lebih tipis/pudar di dark mode */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); /* Bayangan lebih terlihat di dark mode */
+}
+
+/* Scrollbar (opsional, untuk konsistensi) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Track lebih gelap di dark mode */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Thumb lebih terang di dark mode */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
